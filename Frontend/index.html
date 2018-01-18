@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        select {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        .show {
+            display: none;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <select id="continentsId" name="text">
+        <option selected="selected" value="default">Continent</option>
+        <option class="show" value="europe"></option>
+        <option class="show" value="asia"></option>
+        <option class="show" value="america"></option>
+        <option class="show" value="australia"></option>
+    </select>
+
+    <select id="countriesId">
+        <option selected="selected" value="default">Countries</option>
+        <option class="show" value="country1"></option>
+        <option class="show" value="country2"></option>
+        <option class="show" value="country3"></option>
+        <option class="show" value="country4"></option>
+    </select>
+
+    <select id="citiesId">
+        <option selected="selected" value="default">Cities</option>
+        <option class="show" value="city1"></option>
+        <option class="show" value="city2"></option>
+        <option class="show" value="city3"></option>
+        <option class="show" value="city4"></option>
+    </select>
+
+    <button id="button" onClick="getCityLocation()">Find City!</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="logic/jquery-3.2.1.min.js"></script>
+    <script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAjjyXrIzsRrAeRmx6uy0LcOAASvDo8yAE&callback=initMap'
+        type="text/javascript"></script>
+    <script src="logic/app.js"></script>
+</body>
+
+</html>
